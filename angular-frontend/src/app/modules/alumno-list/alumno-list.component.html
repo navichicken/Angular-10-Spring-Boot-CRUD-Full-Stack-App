@@ -1,0 +1,29 @@
+<h2> Alumno List</h2>
+<div class="float-right">
+    <button  (click) = "createAlumno()" class="btn btn-success">Nuevo</button>
+</div>
+<p><br></p>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Nombres</th>
+            <th> Apelidos </th>
+            <th> Email Id</th>
+            <th> Tipo alumno </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let alumno of alumnos" >
+            <td> {{ alumno.nombres }} </td>
+            <td> {{ alumno.apellidos }} </td>
+            <td> {{ alumno.emailId }} </td>
+            <td> {{ getTipoAlumno(alumno.tipoAlumno) }} </td>
+            <td>
+                <button (click) = "updateAlumno(alumno.id)" class = "btn btn-info"> Actualizar</button>
+                <button (click) = "deleteAlumno(alumno.id)" class = "btn btn-danger" style="margin-left: 10px"> Eliminar</button>
+                <button (click) = "alumnoDetails(alumno.id)" class = "btn btn-info" style="margin-left: 10px"> Detalles</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

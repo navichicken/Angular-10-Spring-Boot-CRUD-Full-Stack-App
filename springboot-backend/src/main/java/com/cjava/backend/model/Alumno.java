@@ -9,53 +9,67 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "employees")
-public class Employee {
+public class Alumno {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@Column(name = "first_name")
-	private String firstName;
+	@Column(name = "nombres")
+	private String nombres;
 
-	@Column(name = "last_name")
-	private String lastName;
+	@Column(name = "apellido")
+	private String apellidos;
 	
 	@Column(name = "email_id")
 	private String emailId;
 	
-	public Employee() {
+	@Column(name = "tipo_alumno")
+	private int tipoAlumno;
+	
+	public Alumno() {
 		
 	}
-	
-	public Employee(String firstName, String lastName, String emailId) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.emailId = emailId;
-	}
+
 	public long getId() {
 		return id;
 	}
+
 	public void setId(long id) {
 		this.id = id;
 	}
-	public String getFirstName() {
-		return firstName;
+
+	public String getNombres() {
+		return nombres;
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+
+	public void setNombres(String nombres) {
+		this.nombres = nombres;
 	}
-	public String getLastName() {
-		return lastName;
+
+	public String getApellidos() {
+		return apellidos;
 	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+
+	public void setApellidos(String apellidos) {
+		this.apellidos = apellidos;
 	}
+
 	public String getEmailId() {
 		return emailId;
 	}
+
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
 	}
+
+	public int getTipoAlumno() {
+		return tipoAlumno;
+	}
+
+	public void setTipoAlumno(int tipoAlumno) {
+		this.tipoAlumno = tipoAlumno;
+	}
+	
+
 }

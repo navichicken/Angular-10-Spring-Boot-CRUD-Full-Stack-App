@@ -1,0 +1,33 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Create Alumno </h3>
+    <form (ngSubmit) = "onSubmit()" ngNativeValidate>
+    
+        <div class="form-group">
+            <label> Nombres</label>
+            <input type="text" class ="form-control" id = "nombres"
+                [(ngModel)] = "alumno.nombres" name = "nombres" required>
+        </div>
+    
+        <div class="form-group">
+            <label> Apellidos </label>
+            <input type="text" class ="form-control" id = "apellidos"
+                [(ngModel)] = "alumno.apellidos" name = "apellidos" required>
+        </div>
+    
+        <div class="form-group">
+            <label> Email </label>
+            <input type="text" class ="form-control" id = "emailId"
+                [(ngModel)] = "alumno.emailId" name = "emailId" required> 
+        </div>
+
+        <div class="form-group">
+            <label> Tipo de alumno </label>
+            <select type="text" class ="form-control"  name="tipoAlumno" [(ngModel)]="alumno.tipoAlumno" required>
+                <option *ngFor="let level of levels" [ngValue]="level">{{level.name}}</option>
+              </select>
+        </div>
+
+        <button class = "btn btn-success" type ="submit">Crear nuevo</button>
+    
+    </form>
+    </div> 
