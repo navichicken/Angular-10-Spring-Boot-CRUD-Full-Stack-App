@@ -1,4 +1,4 @@
-package net.javaguides.springboot;
+package com.cjava.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
